@@ -14,9 +14,9 @@ func Route(srv *td.Server, rootGroup string) {
 	// APIs...
 	{
 
-		v1_test := srv.Group(rootGroup + "/v1/test")
-		v1_test.Post("/ping", PingHandle)
-		v1_test.Get("/ping", PingHandle)
+		v1_chat := srv.Group(rootGroup + "/v1/chat")
+		v1_chat.Post("/do", DoHandle)
+		v1_chat.Get("/do", DoHandle)
 	}
 
 }

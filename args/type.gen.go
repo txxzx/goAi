@@ -10,8 +10,17 @@ import (
 // EmptyStruct alias of type struct {}
 type EmptyStruct = binding.Empty
 
-// PingArgsV1 alias of type binding.Empty
-type PingArgsV1 = binding.Empty
+// ChatDoArgsV1 comment...
+type ChatDoArgsV1 struct {
+	// 厂商[1: 百度 2: 讯飞 3: 智谱]
+	Platform int `json:"platform"`
+	// 是否流式
+	Stream bool `json:"stream"`
+	// 对话内容
+	Content string `json:"content"`
+}
 
-// PingResultV1 alias of type binding.Empty
-type PingResultV1 = binding.Empty
+// ChatDoResultV1 comment...
+type ChatDoResultV1 struct {
+	Message string `json:"message"`
+}

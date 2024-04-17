@@ -4,12 +4,12 @@
 
 package logic
 
-import (
-	td "github.com/swxctx/malatd"
-	"github.com/txxzx/goAi/args"
-)
-
-// Ping handler
-func V1_Test_Ping(ctx *td.Context, arg *args.PingArgsV1) (*args.PingResultV1, *td.Rerror) {
-	return new(args.PingResultV1), nil
-}
+//import (
+//	td "github.com/swxctx/malatd"
+//	"github.com/txxzx/goAi/args"
+//)
+//
+//// Do handler
+//func V1_Chat_Do(ctx *td.Context, arg *args.ChatDoArgsV1) (*args.ChatDoResultV1, *td.Rerror) {
+//	return new(args.ChatDoResultV1), nil
+//}

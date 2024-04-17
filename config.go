@@ -3,6 +3,7 @@ package main
 import (
 	td "github.com/swxctx/malatd"
 	"github.com/swxctx/xlog"
+	"github.com/txxzx/goAi/zhipu"
 	"github.com/usthooz/gconf"
 )
 
@@ -23,6 +24,11 @@ func reload() {
 	err := conf.GetConf(&cfg)
 	if err != nil {
 		xlog.Errorf("GetConf Err: %v", err.Error())
+	}
+
+	// 初始化厂商SDK
+	if err := zhipu.NewClient("oR", true); err != nil {
+		xlog.Errorf("Config: zhipu.NewClient err-> %v", err)
 	}
 }
 
